@@ -1,5 +1,7 @@
 <?php
-
+$path=$_GET["path"];
+$path="./controller/".substr($path,0,-4)."php";
+require "$path";
 
 /*
 
