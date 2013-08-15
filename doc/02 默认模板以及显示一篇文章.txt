@@ -1,0 +1,12 @@
+
+/view/public 目录下有一个压缩文件，里面是随手在网上找的一个html模板
+请将该模板拆分到 index.html footer.html 以及 index.html 中，（只需要用到template.zip中的 index.html 其他的请先无视）
+拆分好了之后，通过对应的 /controller/public/header.php 以及 /controller/public/footer.php 调用，不过最后还是通过 controller/public/index.php 来统一调用（当然不这样做能实现也可以）
+安排好了之后要实现的效果就是通过请求 index.php?path=public/index.html 能够看到完整的页面 （即template.zip 解压之后直接打开看到的 index.html 的样子）
+
+注意 css、image 等目录需要变动，因为通过入口引入的方式调用到的路径是网站根目录 如果在 view中直接 ./image/1.jpg 的话，调用到的不是 /view/public/image/1.jpg 而是 根目录/image/1.jpg ，解决方案有两种，一种是将css之类的模板有用到的目录移动到网站根目录，还有一种是在模板中写出全路径（即原本的 /image/1.jpg 要修改成 /view/public/image/1.jpg）。
+
+上述效果实现之后就可以开始来显示我们的文章了。
+
+首先找到 kernel/lib/article.sql 请导入数据库，编写一个简单的数据库操作类。
+接着要实现的效果是 当用户请求 index.php?path=article/article_1.html 时，调用 controller/article/article.php 去查询文章id等于1的文章（即开始导入的），接着加载模板，先去判断 /view/article/header.html 和 /view/article/footer.html 是否存在不存在则调用默认的 /view/public/header.html 以及 /view/public/footer.html 接着中间则调用 /view/article/article.html

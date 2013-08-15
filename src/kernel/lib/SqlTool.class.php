@@ -35,6 +35,8 @@
  		public function dql($sql){
  			$array=array();
  			$result=mysql_query($sql,$this->conn)or die(mysql_error());
+
+ 			// 在这里请以数组的形式返回查询结果
  		}
 
 
