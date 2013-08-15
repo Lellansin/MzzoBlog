@@ -1,12 +1,12 @@
 <?php
 //定义一个控制器变量来检测控制器路径是否存在或者正确
-$controllerUrl="home/index.html";
+$controllerUrl="public/index.html";
 //获取路径的URL
 $pathUrl=$_GET['path'];
 //把获取到的路径与控制器变量进行判断；
 if (strcmp($controllerUrl,$pathUrl)) {
 	//判断结果为假则调转为默认路径
-	header("Location:index.php?path=home/index.html"); 
+	header("Location:index.php?path=public/index.html"); 
 }
 require "./kernel/mzzo.php";
 
@@ -15,7 +15,7 @@ require "./kernel/mzzo.php";
 /* 
 
 $host= $_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
-$pathUrl=$host."?path=home/index.html";
+$pathUrl=$host."?path=public/index.html";
 
 index.php
 
