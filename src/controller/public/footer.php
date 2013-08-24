@@ -2,5 +2,4 @@
 
 	require "./view/public/footer.html";
 
-
 ?>
