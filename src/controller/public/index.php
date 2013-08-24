@@ -1,13 +1,13 @@
 <?php
 
 
-$test="ceshi";
+$test = "ceshi";
 
 
 
 // 这里包含页面就相当于把其中的到吗都包含了过来，也就是这个控制器和那个HTML 是在同一个文件的样子
 
-$body = "public.html"
+$body = "public.html";
 
 
 require "./view/public/index.html";

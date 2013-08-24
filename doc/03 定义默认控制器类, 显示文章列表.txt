@@ -1,0 +1,37 @@
+
+那么现在我们已经可以显示首页，以及显示一篇文章了。
+
+下一步要做的事情就是定义一个默认的控制器类来调用控制器。
+
+1.
+首先我们要从功能上明确，现在 kernel/mzzo.php 中的代码全都是属于控制器部分的。这不是一个很好的现象，我们需要把这些只属于控制器的代码封装到专门的控制器类中去。
+
+
+2.
+控制器类好了之后我们在定义一个 controller/article/list.php 作为文章列表控制器
+对应的添加一个 view/article/list.html 文章列表模板
+
+接着实现访问 index.php?path=article/list.html 可以查看文章列表
+通过文章列表可以跳转去访问 对应的 index.php?path=article/article_1234.html 文章
+
+3.
+定义一个菜单表。
+只要三个字段：
+1. id
+2. name
+3. url
+
+现在就存两个数据
+
+首页 index.php?path=public/index.html
+文章 index.php?path=article/list.html
+
+
+查询出来之后再 view/public/header.html 中调用显示网站导航栏。
+
+
+
+其他细节：
+火狐firebug有报两个错，是资源没找到，看下修正一下（删除链接，或者找到资源修改位置）
+还有文章加载出来的背景是底层背景，还是加一个白色的背景上去吧。
+其他就是目前膜拜有些复杂了，看下哪些有些没有用到的代码或者css都删了吧清爽一点。

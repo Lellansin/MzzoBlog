@@ -1,5 +1,6 @@
 <?php
 
+require './kernel/controller.php';
 require "./kernel/lib/SqlTool.class.php";
 
 $path = $_GET["path"];
@@ -47,7 +48,10 @@ echo $path;
 echo "<br/>";
 
 // 调用控制器
-require "$path";
+// require "$path";
+
+
+$control = new Controller($path);
 
 
 /*
