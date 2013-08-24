@@ -11,7 +11,7 @@
  	class SqlTool{
 
  		private $conn;
- 		private $dbname="article";
+ 		private $dbname="empmanage";
  		private $host="localhost";
  		private $user="root";
  		private $password="";
@@ -35,12 +35,7 @@
  		public function dql($sql){
  			$array=array();
  			$result=mysql_query($sql,$this->conn)or die(mysql_error());
- 			//返回每天内容的栏目名称
- 			while ($row=mysql_fetch_assoc($result)) {
- 				$array=$row;
- 			}
- 			mysql_free_result($result);
- 			return $array;
+
  			// 在这里请以数组的形式返回查询结果
  		}
 

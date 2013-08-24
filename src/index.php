@@ -4,15 +4,16 @@ $controllerUrl="public/index.html";
 //获取路径的URL
 $pathUrl=$_GET['path'];
 //把获取到的路径与控制器变量进行判断；
-
-require "./kernel/mzzo.php";
-
-
-/* 
 if (strcmp($controllerUrl,$pathUrl)) {
 	//判断结果为假则调转为默认路径
 	header("Location:index.php?path=public/index.html"); 
 }
+require "./kernel/mzzo.php";
+
+
+
+/* 
+
 $host= $_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
 $pathUrl=$host."?path=public/index.html";
 

@@ -1,38 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hello</title>
+</head>
 <body>
-  <div id="main">
+
 <?php
-  require "header.html";
+	// 默认包含 controller/public/header.php 让该控制器再去包含模板再此处，这样可以在控制器中方便的设置header的显示内容
 ?>
-	<div class="inner_copyright">Collect from <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a></div>
-    <div id="site_content">
-      <div id="sidebar_container">
-        <div class="gallery">
-          <ul class="images">
-            <li class="show"><img width="450" height="450" src="./view/public/images/1.jpg" alt="photo_one" /></li>
-            <li><img width="450" height="450" src="./images/2.jpg" alt="photo_two" /></li>
-            <li><img width="450" height="450" src="./images/3.jpg" alt="photo_three" /></li>
-            <li><img width="450" height="450" src="./images/4.jpg" alt="photo_four" /></li>
-            <li><img width="450" height="450" src="./images/5.jpg" alt="photo_five" /></li>
-          </ul>
-        </div>
-      </div>
-      <div id="content">
-        <h1>Welcome to photo_style_two</h1>
-        <p>This standards compliant, fixed width website template is released as an 'open source' design (under a Creative Commons Attribution 3.0 Licence), which means that you are free to use it for anything you want (including modifying and amending it). All I ask is that you leave the '网页模板' link in the footer of the template. All of the photos were taken by me - use as you wish.</p>
-        <h3>Browser Compatibility</h3>
-        <p>This template has been tested in the following browsers:</p>
-        <ul>
-          <li>Internet Explorer 8</li>
-          <li>Internet Explorer 7</li>
-          <li>FireFox 10</li>
-          <li>Google Chrome 17</li>
-        </ul>
-      </div>
-    </div>
+
 <?php
-require "footer.html";
+	// 包含 body
 ?>
-  </div>
-  <p>&nbsp;</p>
+
+<?php
+	// 包含 footer
+?>
+
 </body>
 </html>
